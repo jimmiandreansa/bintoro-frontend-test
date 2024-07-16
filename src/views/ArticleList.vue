@@ -16,7 +16,9 @@
             class="h-12"
           />
         </div>
-        <div class="text-white uppercase cursor-pointer flex items-center gap-6">
+        <div
+          class="text-white uppercase cursor-pointer flex items-center gap-6"
+        >
           <a href="/" class="">Beranda</a>
           <a href="/">Tentang Kami +</a>
           <a href="/">Layanan +</a>
@@ -30,23 +32,46 @@
           </button>
         </div>
       </div>
-      <h1 class="text-5xl font-semibold absolute left-48 top-1/2">News & Articles</h1>
+      <h1 class="text-5xl font-semibold absolute left-48 top-1/2">
+        News & Articles
+      </h1>
       <nav class="mt-4 text-lg absolute right-52 top-1/2">
         <a href="/" class="text-gray-300 hover:text-white">Home</a> -
         <a href="/blog" class="text-orange-500 hover:text-orange-600">Blog</a>
       </nav>
     </div>
   </section>
-  <div class="container">
-    <h1>Blog</h1>
-    <div v-for="article in articles" :key="article.id" class="article-preview">
-      <router-link :to="{ name: 'ArticleDetail', params: { id: article.id } }">
-        <h2>{{ article.title }}</h2>
-      </router-link>
-      <p>{{ article.content.substring(0, 100) }}...</p>
+
+  <section class="container flex">
+    <div class="">
+      <div class="w-full flex flex-col gap-12">
+        <div v-for="article in articles" :key="article.id"  class="shadow-lg">
+          <img
+            src="https://bintoroarchitect.co.id/wp-content/uploads/2024/04/Cover-Desain-Rumah-2-Lantai-Sederhana-dan-Biaya-720x400.webp"
+            alt="gambar"
+          />
+          <div class="p-8">
+            <router-link
+              :to="{ name: 'ArticleDetail', params: { id: article.id } }"
+            >
+              <h2 class="font-bold text-2xl mb-4">
+                {{ article.title }}
+              </h2>
+            </router-link>
+            <div class="flex gap-4 mb-4">
+              <p>April 2, 2024</p>
+              <p class="font-light">Web Admin</p>
+              <p class="font-light">0 Comments</p>
+            </div>
+            <p>
+              {{ article.content.substring(0, 100) }}..
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div ref="loadMoreTrigger" class="load-more-trigger"></div>
-  </div>
+    <div class="w-96">INi sbelahnya</div>
+  </section>
 </template>
 
 <script>
@@ -80,5 +105,4 @@ export default {
 </script>
 
 <style>
-/* @import 'bootstrap/dist/css/bootstrap.min.css'; */
 </style>
