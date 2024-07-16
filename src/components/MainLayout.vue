@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div width="100%">
     <Navbar />
     <main>
-      <slot></slot>
+      <router-view></router-view>
     </main>
     <Footer />
   </div>

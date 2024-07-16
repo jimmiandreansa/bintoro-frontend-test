@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/arimo": "^5.0.20",
+    "@fontsource/rubik": "^5.0.20",
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "vue": "^3.4.29",
     "vue-router": "^4.4.0",
     "vuex": "^4.1.0"
